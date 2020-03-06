@@ -12,3 +12,4 @@ First, it comes with an **API** responsible for sending messages from requests. 
 
 - [@pigeon/api](packages/api)
 - [@pigeon/sdk](packages/sdk)
+- [@pigeon/cli](packages/cli)
