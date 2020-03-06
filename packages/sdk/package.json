@@ -1,0 +1,26 @@
+{
+  "name": "@pigeon/sdk",
+  "description": "A small SDK to send messages with Pigeon 🔧",
+  "author": "mattp94",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattp94/pigeon.git",
+    "directory": "packages/sdk"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "ky": "^0.18.0",
+    "ky-universal": "^0.5.0"
+  },
+  "jest": {
+    "displayName": "sdk",
+    "setupFiles": [
+      "./test.setup.js"
+    ]
+  }
+}
