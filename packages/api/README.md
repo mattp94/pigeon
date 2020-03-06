@@ -1,0 +1,27 @@
+# @pigeon/api
+
+> A simple API to send SMS and email using HTTP 📮
+
+## Requirements
+
+- [Node.js](https://nodejs.org)
+- [Gammu](https://wammu.eu/gammu)
+- [Gmail](https://www.google.com/gmail/about)
+
+## Getting started
+
+First, build the project:
+
+```sh
+npm install
+```
+
+Then, run it after setting these environment variables:
+
+```sh
+GMAIL_EMAIL=\"fake.messenger@gmail.com\" \
+GMAIL_NAME=\"FakeMessenger\" \
+GMAIL_PASSWORD=\"secret\" \
+USERS="[{ \"name\": \"bobby\", \"password\": \"12345\" }]" \
+npm start
+```

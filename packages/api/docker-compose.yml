@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  api:
+    build: .
+    image: pigeon
+    container_name: pigeon
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+    devices:
+      - /dev/ttyUSB0:/dev/mobile

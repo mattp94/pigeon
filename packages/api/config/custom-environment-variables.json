@@ -1,0 +1,24 @@
+{
+  "gmail": {
+    "email": {
+      "__format": "json",
+      "__name": "GMAIL_EMAIL"
+    },
+    "name": {
+      "__format": "json",
+      "__name": "GMAIL_NAME"
+    },
+    "password": {
+      "__format": "json",
+      "__name": "GMAIL_PASSWORD"
+    }
+  },
+  "port": {
+    "__format": "json",
+    "__name": "PORT"
+  },
+  "users": {
+    "__format": "json",
+    "__name": "USERS"
+  }
+}

@@ -1,0 +1,10 @@
+.dockerignore
+.env
+**/.DS_Store
+config/test.json
+coverage/
+docker-compose.yml
+Dockerfile
+node_modules/
+test.setup.js
+test/
