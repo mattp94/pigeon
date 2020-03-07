@@ -2,7 +2,7 @@
   "name": "@pigeon/sdk",
   "description": "A small SDK to send messages with Pigeon 🔧",
   "author": "mattp94",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/mattp94/pigeon.git",
