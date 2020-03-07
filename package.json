@@ -7,8 +7,8 @@
   "scripts": {
     "prettify": "prettier --write './**/*.{js,json,yml}'",
     "test": "jest",
-    "version": "lerna version --no-push",
-    "publish": "lerna publish from-package"
+    "release:version": "lerna version --no-push",
+    "release:publish": "lerna publish from-package"
   },
   "devDependencies": {
     "coveralls": "^3.0.9",
