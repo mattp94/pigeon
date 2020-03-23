@@ -11,32 +11,32 @@ module.exports = yargs
     alias: "t",
     describe: "Recipient",
     type: "string",
-    demandOption: true
+    demandOption: true,
   })
   .option("subject", {
     alias: "s",
     describe: "Email subject",
-    type: "string"
+    type: "string",
   })
   .option("message", {
     alias: "m",
     describe: "Message content",
     type: "string",
-    demandOption: true
+    demandOption: true,
   })
   .option("host", {
     alias: "h",
     describe: "Server host",
     type: "string",
     default: config.get("host"),
-    demandOption: !config.has("host")
+    demandOption: !config.has("host"),
   })
   .option("name", {
     alias: "n",
     describe: "Name",
     type: "string",
     default: config.get("name"),
-    demandOption: !config.has("name")
+    demandOption: !config.has("name"),
   })
   .option("password", {
     alias: "p",
@@ -44,12 +44,12 @@ module.exports = yargs
     type: "string",
     default: config.get("password"),
     defaultDescription: hide(config.get("password")),
-    demandOption: !config.has("password")
+    demandOption: !config.has("password"),
   })
   .option("remember", {
     alias: "r",
     describe: "Remember me",
-    type: "boolean"
+    type: "boolean",
   })
   .help()
   .locale("en").argv;

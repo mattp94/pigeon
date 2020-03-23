@@ -5,12 +5,12 @@ const Client = require("../lib/client");
 it("should throw an error", async () => {
   const client = new Client({
     name: "bobby",
-    password: "54321"
+    password: "54321",
   });
 
   const promise = client.send({
     to: "0876543210",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   await expect(promise).rejects.toThrowError("Boom");
@@ -20,8 +20,8 @@ it("should throw an error", async () => {
       name: "bobby",
       password: "54321",
       to: "0876543210",
-      message: "Hello world"
-    }
+      message: "Hello world",
+    },
   });
 });
 
@@ -29,12 +29,12 @@ it("should send a sms", async () => {
   const client = new Client({
     name: "bobby",
     password: "12345",
-    host: "http://pigeon:3000"
+    host: "http://pigeon:3000",
   });
 
   await client.send({
     to: "0876543210",
-    message: "Bonjour monde"
+    message: "Bonjour monde",
   });
 
   expect(ky).toHaveBeenLastCalledWith("http://pigeon:3000", {
@@ -42,8 +42,8 @@ it("should send a sms", async () => {
       name: "bobby",
       password: "12345",
       to: "0876543210",
-      message: "Bonjour monde"
-    }
+      message: "Bonjour monde",
+    },
   });
 });
 
@@ -51,13 +51,13 @@ it("should send an email", async () => {
   const client = new Client({
     name: "bobby",
     password: "12345",
-    host: "http://pigeon:8080"
+    host: "http://pigeon:8080",
   });
 
   await client.send({
     to: "bobby@pigeon.io",
     subject: "Bonjour",
-    message: "<p>Bonjour monde</p>"
+    message: "<p>Bonjour monde</p>",
   });
 
   expect(ky).toHaveBeenLastCalledWith("http://pigeon:8080", {
@@ -66,7 +66,7 @@ it("should send an email", async () => {
       password: "12345",
       to: "bobby@pigeon.io",
       subject: "Bonjour",
-      message: "<p>Bonjour monde</p>"
-    }
+      message: "<p>Bonjour monde</p>",
+    },
   });
 });

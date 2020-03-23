@@ -8,20 +8,20 @@ const {
   password,
   remember,
   subject,
-  to
+  to,
 } = require("./options");
 
 module.exports = async () => {
   const pigeon = new Pigeon({
     name,
     password,
-    host
+    host,
   });
 
   await pigeon.send({
     to,
     subject,
-    message
+    message,
   });
 
   if (remember) {

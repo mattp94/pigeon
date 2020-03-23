@@ -2,7 +2,7 @@ const schema = require("../utils/schema");
 
 module.exports = async (ctx, next) => {
   const { error, value } = schema.validate(ctx.query, {
-    presence: "required"
+    presence: "required",
   });
 
   if (error) {

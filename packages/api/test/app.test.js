@@ -27,7 +27,7 @@ it("should get a 400 because name is missing", async () => {
   const response = await request.get("/").query({
     password: "12345",
     to: "0876543210",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   expect(response.statusCode).toBe(400);
@@ -38,7 +38,7 @@ it("should get a 400 because password is missing", async () => {
   const response = await request.get("/").query({
     name: "bobby",
     to: "0876543210",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   expect(response.statusCode).toBe(400);
@@ -50,7 +50,7 @@ it("should get a 400 because phone is not valid", async () => {
     name: "bobby",
     password: "12345",
     to: "1876543210",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   expect(response.statusCode).toBe(400);
@@ -62,7 +62,7 @@ it("should get a 400 because email is not valid", async () => {
     name: "bobby",
     password: "12345",
     to: "bobby@pigeon",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   expect(response.statusCode).toBe(400);
@@ -73,7 +73,7 @@ it("should get a 400 because message is missing", async () => {
   const response = await request.get("/").query({
     name: "bobby",
     password: "12345",
-    to: "0876543210"
+    to: "0876543210",
   });
 
   expect(response.statusCode).toBe(400);
@@ -85,7 +85,7 @@ it("should get a 401 because name is incorrect", async () => {
     name: "raoul",
     password: "12345",
     to: "0876543210",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   expect(response.statusCode).toBe(401);
@@ -97,7 +97,7 @@ it("should get a 401 because password is incorrect", async () => {
     name: "bobby",
     password: "54321",
     to: "0876543210",
-    message: "Hello world"
+    message: "Hello world",
   });
 
   expect(response.statusCode).toBe(401);
@@ -109,7 +109,7 @@ it("should get a 200 even though gammu command failed", async () => {
     name: "bobby",
     password: "12345",
     to: "0876543210",
-    message: " Hello world "
+    message: " Hello world ",
   });
 
   expect(response.statusCode).toBe(200);
@@ -128,7 +128,7 @@ it("should get a 200 even though nodemailer failed", async () => {
     password: "12345",
     to: "bobby@pigeon.io",
     subject: " Hello ",
-    message: " <p>Hello world</p> "
+    message: " <p>Hello world</p> ",
   });
 
   expect(response.statusCode).toBe(200);
@@ -139,7 +139,7 @@ it("should get a 200 even though nodemailer failed", async () => {
     html: "<p>Hello world</p>",
     subject: "Hello",
     text: "Hello world",
-    to: "bobby@pigeon.io"
+    to: "bobby@pigeon.io",
   });
 });
 
@@ -148,7 +148,7 @@ it("should get a 200 and send a sms", async () => {
     name: "bobby",
     password: "12345",
     to: "0876543210",
-    message: "Bonjour monde"
+    message: "Bonjour monde",
   });
 
   expect(response.statusCode).toBe(200);
@@ -167,7 +167,7 @@ it("should get a 200 and send an email", async () => {
     password: "12345",
     to: "bobby@pigeon.io",
     subject: " Bonjour ",
-    message: " <p>Bonjour monde</p> "
+    message: " <p>Bonjour monde</p> ",
   });
 
   expect(response.statusCode).toBe(200);
@@ -178,6 +178,6 @@ it("should get a 200 and send an email", async () => {
     html: "<p>Bonjour monde</p>",
     subject: "Bonjour",
     text: "Bonjour monde",
-    to: "bobby@pigeon.io"
+    to: "bobby@pigeon.io",
   });
 });

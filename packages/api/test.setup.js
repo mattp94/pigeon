@@ -13,7 +13,7 @@ jest.mock("child_process", () => {
     });
 
   return {
-    execFile: execFileMock
+    execFile: execFileMock,
   };
 });
 
@@ -25,6 +25,6 @@ jest.mock("nodemailer", () => {
 
   return {
     createTransport: () => ({ sendMail: sendMailMock }),
-    sendMail: sendMailMock
+    sendMail: sendMailMock,
   };
 });

@@ -12,7 +12,7 @@ module.exports = class {
       name,
       password,
       to,
-      message
+      message,
     };
 
     if (subject) {

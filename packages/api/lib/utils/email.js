@@ -8,8 +8,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: gmail.email,
-    pass: gmail.password
-  }
+    pass: gmail.password,
+  },
 });
 
 const queue = new Queue({ concurrency: 1 });
@@ -23,7 +23,7 @@ module.exports = async (to, subject, message) => {
       to,
       subject,
       text,
-      html: message
+      html: message,
     })
   );
 };

@@ -7,10 +7,6 @@ const validator = require("./middlewares/validator");
 
 const app = new Koa();
 
-app
-  .use(logger)
-  .use(validator)
-  .use(auth)
-  .use(message);
+app.use(logger).use(validator).use(auth).use(message);
 
 module.exports = app;

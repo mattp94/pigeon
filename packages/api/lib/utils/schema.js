@@ -7,8 +7,6 @@ module.exports = Joi.object({
     Joi.string().email(),
     Joi.string().pattern(/^0[1-9]\d{8}$/)
   ),
-  subject: Joi.string()
-    .trim()
-    .optional(),
-  message: Joi.string().trim()
+  subject: Joi.string().trim().optional(),
+  message: Joi.string().trim(),
 });

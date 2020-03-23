@@ -6,7 +6,7 @@ const send = require("./lib/send");
 
 send()
   .then(() => console.log(chalk.green("✔"), "Sent"))
-  .catch(err => {
+  .catch((err) => {
     console.error(
       chalk.red("✘"),
       err.name === "HTTPError" ? err.message : "Unavailable"
