@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prettify": "prettier --write './**/*.{js,json,yml}'",
+    "format": "pretty-quick",
     "test": "jest",
     "release:version": "lerna version --no-push",
     "release:publish": "lerna publish from-package"
