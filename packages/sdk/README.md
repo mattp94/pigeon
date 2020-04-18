@@ -4,7 +4,7 @@
 
 ## Install
 
-```
+```sh
 npm install @pigeon/sdk
 ```
 
@@ -19,7 +19,7 @@ const Pigeon = require("@pigeon/sdk");
 
 const pigeon = new Pigeon({
   name: "bobby",
-  password: "54321",
+  password: "54321"
 });
 ```
 
@@ -28,7 +28,7 @@ Then, use the instance to send a SMS:
 ```js
 pigeon.send({
   to: "0876543210",
-  message: "Hello world",
+  message: "Hello world"
 });
 ```
 
@@ -38,6 +38,6 @@ As well as an email:
 pigeon.send({
   to: "bobby@pigeon.io",
   subject: "Hello",
-  message: "<p>Hello world</p>",
+  message: "<p>Hello world</p>"
 });
 ```

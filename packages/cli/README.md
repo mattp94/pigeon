@@ -6,7 +6,7 @@
 
 The only requirement is to have [Node.js](https://nodejs.org). Then, install it globally with:
 
-```
+```sh
 npm install --global @pigeon/cli
 ```
 
