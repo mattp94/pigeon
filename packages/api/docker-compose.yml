@@ -11,4 +11,3 @@ services:
       - 3000:3000
     devices:
       - /dev/ttyUSB0:/dev/mobile
-    tty: true
