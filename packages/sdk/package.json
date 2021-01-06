@@ -14,8 +14,7 @@
     "lib"
   ],
   "dependencies": {
-    "ky": "^0.25.1",
-    "ky-universal": "^0.8.2"
+    "cross-fetch": "^3.0.6"
   },
   "jest": {
     "displayName": "sdk",

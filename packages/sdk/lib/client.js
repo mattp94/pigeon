@@ -1,4 +1,4 @@
-const ky = require("ky-universal");
+const fetch = require("cross-fetch");
 
 module.exports = class {
   constructor({ name, password, host = "http://localhost:3000" }) {
@@ -8,7 +8,7 @@ module.exports = class {
   async send({ to, subject, message }) {
     const { name, password, host } = this;
 
-    const searchParams = {
+    const payload = {
       name,
       password,
       to,
@@ -16,9 +16,14 @@ module.exports = class {
     };
 
     if (subject) {
-      searchParams.subject = subject;
+      payload.subject = subject;
     }
 
-    await ky(host, { searchParams });
+    const params = new URLSearchParams(payload);
+    const response = await fetch(`${host}?${params}`);
+
+    if (!response.ok) {
+      throw Error(`${response.statusText} (${response.status})`);
+    }
   }
 };
