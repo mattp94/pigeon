@@ -18,9 +18,9 @@ First, instantiate `Pigeon` by passing your credentials as well as the API url:
 const Pigeon = require("@pigeon/sdk");
 
 const pigeon = new Pigeon({
-  host: "http://pigeon:3000",
+  host: "http://localhost:4000", // default is "http://localhost:3000"
   name: "bobby",
-  password: "54321",
+  password: "12345",
 });
 ```
 
@@ -42,3 +42,5 @@ pigeon.send({
   message: "<p>Hello world</p>",
 });
 ```
+
+> For your information, `send` returns a promise you can catch

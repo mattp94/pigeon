@@ -16,12 +16,18 @@ First, build the project:
 npm install
 ```
 
-Then, run it after setting these environment variables:
+Then, make your configuration with these environment variables:
 
 ```sh
-GMAIL_EMAIL=\"fake.messenger@gmail.com\" \
-GMAIL_NAME=\"FakeMessenger\" \
-GMAIL_PASSWORD=\"secret\" \
-USERS="[{ \"name\": \"bobby\", \"password\": \"12345\" }]" \
+GMAIL_EMAIL=\"fake.messenger@gmail.com\"
+GMAIL_NAME=\"FakeMessenger\"
+GMAIL_PASSWORD=\"secret\"
+USERS="[{ \"name\": \"bobby\", \"password\": \"12345\" }]"
+PORT=4000 # default is 3000
+```
+
+Let's run it with:
+
+```sh
 npm start
 ```
