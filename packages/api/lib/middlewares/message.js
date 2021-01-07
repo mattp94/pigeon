@@ -10,5 +10,5 @@ module.exports = (ctx) => {
 
   promise.catch((err) => ctx.app.emit("error", err, ctx));
 
-  ctx.status = 200;
+  ctx.status = 202;
 };

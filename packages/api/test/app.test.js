@@ -104,7 +104,7 @@ it("should get a 401 because password is incorrect", async () => {
   expect(response.text).toBe("Unauthorized");
 });
 
-it("should get a 200 even though gammu command failed", async () => {
+it("should get a 202 even though gammu command failed", async () => {
   const response = await request.get("/").query({
     name: "bobby",
     password: "12345",
@@ -112,7 +112,7 @@ it("should get a 200 even though gammu command failed", async () => {
     message: " Hello world ",
   });
 
-  expect(response.statusCode).toBe(200);
+  expect(response.statusCode).toBe(202);
   expect(response.text).toBe("OK");
 
   expect(execFile).toHaveBeenLastCalledWith(
@@ -122,7 +122,7 @@ it("should get a 200 even though gammu command failed", async () => {
   );
 });
 
-it("should get a 200 even though nodemailer failed", async () => {
+it("should get a 202 even though nodemailer failed", async () => {
   const response = await request.get("/").query({
     name: "bobby",
     password: "12345",
@@ -131,7 +131,7 @@ it("should get a 200 even though nodemailer failed", async () => {
     message: " <p>Hello world</p> ",
   });
 
-  expect(response.statusCode).toBe(200);
+  expect(response.statusCode).toBe(202);
   expect(response.text).toBe("OK");
 
   expect(sendMail).toHaveBeenLastCalledWith({
@@ -143,7 +143,7 @@ it("should get a 200 even though nodemailer failed", async () => {
   });
 });
 
-it("should get a 200 and send a sms", async () => {
+it("should get a 202 and send a sms", async () => {
   const response = await request.get("/").query({
     name: "bobby",
     password: "12345",
@@ -151,7 +151,7 @@ it("should get a 200 and send a sms", async () => {
     message: "Bonjour monde",
   });
 
-  expect(response.statusCode).toBe(200);
+  expect(response.statusCode).toBe(202);
   expect(response.text).toBe("OK");
 
   expect(execFile).toHaveBeenLastCalledWith(
@@ -161,7 +161,7 @@ it("should get a 200 and send a sms", async () => {
   );
 });
 
-it("should get a 200 and send an email", async () => {
+it("should get a 202 and send an email", async () => {
   const response = await request.get("/").query({
     name: "bobby",
     password: "12345",
@@ -170,7 +170,7 @@ it("should get a 200 and send an email", async () => {
     message: " <p>Bonjour monde</p> ",
   });
 
-  expect(response.statusCode).toBe(200);
+  expect(response.statusCode).toBe(202);
   expect(response.text).toBe("OK");
 
   expect(sendMail).toHaveBeenLastCalledWith({
