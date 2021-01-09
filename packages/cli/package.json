@@ -18,7 +18,7 @@
   "dependencies": {
     "@pigeon/sdk": "^1.1.0",
     "chalk": "^4.1.0",
-    "conf": "^7.1.2",
+    "conf": "^8.0.0",
     "yargs": "^16.2.0"
   }
 }
