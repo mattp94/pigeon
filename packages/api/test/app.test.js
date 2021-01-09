@@ -113,7 +113,7 @@ it("should get a 202 even though gammu command failed", async () => {
   });
 
   expect(response.statusCode).toBe(202);
-  expect(response.text).toBe("OK");
+  expect(response.text).toBe("Accepted");
 
   expect(execFile).toHaveBeenLastCalledWith(
     "gammu",
@@ -132,7 +132,7 @@ it("should get a 202 even though nodemailer failed", async () => {
   });
 
   expect(response.statusCode).toBe(202);
-  expect(response.text).toBe("OK");
+  expect(response.text).toBe("Accepted");
 
   expect(sendMail).toHaveBeenLastCalledWith({
     from: '"FakeMessenger" <fake.messenger@gmail.com>',
@@ -152,7 +152,7 @@ it("should get a 202 and send a sms", async () => {
   });
 
   expect(response.statusCode).toBe(202);
-  expect(response.text).toBe("OK");
+  expect(response.text).toBe("Accepted");
 
   expect(execFile).toHaveBeenLastCalledWith(
     "gammu",
@@ -171,7 +171,7 @@ it("should get a 202 and send an email", async () => {
   });
 
   expect(response.statusCode).toBe(202);
-  expect(response.text).toBe("OK");
+  expect(response.text).toBe("Accepted");
 
   expect(sendMail).toHaveBeenLastCalledWith({
     from: '"FakeMessenger" <fake.messenger@gmail.com>',
