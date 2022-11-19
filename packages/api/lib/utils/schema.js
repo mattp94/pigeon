@@ -5,7 +5,7 @@ module.exports = Joi.object({
   password: Joi.string(),
   to: Joi.alternatives().try(
     Joi.string().email(),
-    Joi.string().pattern(/^0[1-9]\d{8}$/)
+    Joi.string().pattern(/^0[1-7|9]\d{8}$/)
   ),
   subject: Joi.string().trim().optional(),
   message: Joi.string().trim(),
