@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "format": "pretty-quick",
-    "test": "jest",
+    "test": "GMAIL_EMAIL=fake.messenger@gmail.com GMAIL_NAME=FakeMessenger GMAIL_PASSWORD=secret jest",
     "release:version": "lerna version --no-push",
     "release:publish": "lerna publish from-package"
   },

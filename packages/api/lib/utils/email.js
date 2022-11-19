@@ -1,7 +1,8 @@
 const nodemailer = require("nodemailer");
 const striptags = require("striptags");
-const { gmail } = require("config");
 const { default: Queue } = require("p-queue");
+
+const { gmail } = require("../config");
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",

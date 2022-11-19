@@ -1,4 +1,4 @@
-const { users } = require("config");
+const users = require("../../users");
 
 module.exports = async (ctx, next) => {
   const { name, password } = ctx.state.data;

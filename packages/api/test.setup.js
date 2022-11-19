@@ -1,7 +1,3 @@
-const path = require("path");
-
-process.env.NODE_CONFIG_DIR = path.resolve(__dirname, "config");
-
 jest.mock("child_process", () => {
   const execFileMock = jest
     .fn()
@@ -28,3 +24,10 @@ jest.mock("nodemailer", () => {
     sendMail: sendMailMock,
   };
 });
+
+jest.mock("./users", () => [
+  {
+    name: "bobby",
+    password: "12345",
+  },
+]);

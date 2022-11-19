@@ -19,14 +19,13 @@ npm install
 Then, make your configuration with these environment variables:
 
 ```sh
-GMAIL_EMAIL=\"fake.messenger@gmail.com\"
-GMAIL_NAME=\"FakeMessenger\"
-GMAIL_PASSWORD=\"secret\"
-USERS="[{ \"name\": \"bobby\", \"password\": \"12345\" }]"
+GMAIL_EMAIL=fake.messenger@gmail.com
+GMAIL_NAME=FakeMessenger
+GMAIL_PASSWORD=secret
 PORT=4000 # default is 3000
 ```
 
-Let's run it with:
+Insert a new user in `users.json` and run it using:
 
 ```sh
 npm start

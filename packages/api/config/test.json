@@ -1,8 +1,0 @@
-{
-  "gmail": {
-    "email": "fake.messenger@gmail.com",
-    "name": "FakeMessenger",
-    "password": "secret"
-  },
-  "users": [{ "name": "bobby", "password": "12345" }]
-}
