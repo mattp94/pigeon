@@ -7,13 +7,23 @@ module.exports = class {
 
   async send({ to, subject, message }) {
     const { name, password, host } = this;
+    const payload = {};
 
-    const payload = {
-      name,
-      password,
-      to,
-      message,
-    };
+    if (name) {
+      payload.name = name;
+    }
+
+    if (password) {
+      payload.password = password;
+    }
+
+    if (to) {
+      payload.to = to;
+    }
+
+    if (message) {
+      payload.message = message;
+    }
 
     if (subject) {
       payload.subject = subject;
