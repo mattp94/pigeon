@@ -1,4 +1,4 @@
-const { execFile } = require("child_process");
+const { execFile } = require("node:child_process");
 const { promisify } = require("util");
 const { default: Queue } = require("p-queue");
 

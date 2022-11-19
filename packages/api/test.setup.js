@@ -1,4 +1,4 @@
-jest.mock("child_process", () => {
+jest.mock("node:child_process", () => {
   const execFileMock = jest
     .fn()
     .mockImplementationOnce((file, args, callback) => {

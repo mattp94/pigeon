@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const { execFile } = require("child_process");
+const { execFile } = require("node:child_process");
 const { sendMail } = require("nodemailer");
 
 const app = require("../lib/app");
