@@ -28,7 +28,7 @@ Then, use the instance to send a SMS:
 
 ```js
 pigeon.send({
-  to: "0876543210",
+  to: "0654321234",
   message: "Hello world",
 });
 ```

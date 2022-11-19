@@ -5,7 +5,7 @@ const { hide } = require("./utils");
 
 module.exports = yargs
   .usage("$0 --to <to> [--subject <subject>] --message <message>")
-  .example('$0 -t 0876543210 -m "Hello world"')
+  .example('$0 -t 0654321234 -m "Hello world"')
   .example('$0 -t bobby@pigeon.io -s Hello -m "<p>Hello world</p>"')
   .option("to", {
     alias: "t",

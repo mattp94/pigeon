@@ -9,14 +9,14 @@ it("should throw an unexpected error", async () => {
   });
 
   const promise = client.send({
-    to: "0876543210",
+    to: "0654321234",
     message: "👋",
   });
 
   await expect(promise).rejects.toThrowError("Boom");
 
   expect(fetch).toHaveBeenLastCalledWith(
-    "http://localhost:3000?name=bobby&password=54321&to=0876543210&message=%F0%9F%91%8B"
+    "http://localhost:3000?name=bobby&password=54321&to=0654321234&message=%F0%9F%91%8B"
   );
 });
 
@@ -27,14 +27,14 @@ it("should throw an unauthorized error", async () => {
   });
 
   const promise = client.send({
-    to: "0876543210",
+    to: "0654321234",
     message: "Hello world",
   });
 
   await expect(promise).rejects.toThrowError("Unauthorized (401)");
 
   expect(fetch).toHaveBeenLastCalledWith(
-    "http://localhost:3000?name=bobby&password=54321&to=0876543210&message=Hello+world"
+    "http://localhost:3000?name=bobby&password=54321&to=0654321234&message=Hello+world"
   );
 });
 
@@ -46,12 +46,12 @@ it("should send a sms", async () => {
   });
 
   await client.send({
-    to: "0876543210",
+    to: "0654321234",
     message: "Bonjour monde",
   });
 
   expect(fetch).toHaveBeenLastCalledWith(
-    "http://pigeon:3000?name=bobby&password=12345&to=0876543210&message=Bonjour+monde"
+    "http://pigeon:3000?name=bobby&password=12345&to=0654321234&message=Bonjour+monde"
   );
 });
 
