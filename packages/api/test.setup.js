@@ -27,7 +27,7 @@ jest.mock("nodemailer", () => {
 
 jest.mock("./users", () => [
   {
-    name: "bobby",
-    password: "12345",
+    name: "john",
+    password: "a1b2c3",
   },
 ]);

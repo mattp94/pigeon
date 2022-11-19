@@ -25,7 +25,7 @@ it("should get a 400 because no parameter has been sent", async () => {
 
 it("should get a 400 because name is missing", async () => {
   const response = await request.get("/").query({
-    password: "12345",
+    password: "a1b2c3",
     to: "0654321234",
     message: "Hello world",
   });
@@ -36,7 +36,7 @@ it("should get a 400 because name is missing", async () => {
 
 it("should get a 400 because password is missing", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
+    name: "john",
     to: "0654321234",
     message: "Hello world",
   });
@@ -47,8 +47,8 @@ it("should get a 400 because password is missing", async () => {
 
 it("should get a 400 because phone is not valid", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
+    name: "john",
+    password: "a1b2c3",
     to: "0854321234",
     message: "Hello world",
   });
@@ -59,9 +59,9 @@ it("should get a 400 because phone is not valid", async () => {
 
 it("should get a 400 because email is not valid", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
-    to: "bobby@pigeon",
+    name: "john",
+    password: "a1b2c3",
+    to: "john@pigeon",
     message: "Hello world",
   });
 
@@ -71,8 +71,8 @@ it("should get a 400 because email is not valid", async () => {
 
 it("should get a 400 because message is missing", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
+    name: "john",
+    password: "a1b2c3",
     to: "0654321234",
   });
 
@@ -82,8 +82,8 @@ it("should get a 400 because message is missing", async () => {
 
 it("should get a 401 because name is incorrect", async () => {
   const response = await request.get("/").query({
-    name: "raoul",
-    password: "12345",
+    name: "ryan",
+    password: "a1b2c3",
     to: "0654321234",
     message: "Hello world",
   });
@@ -94,8 +94,8 @@ it("should get a 401 because name is incorrect", async () => {
 
 it("should get a 401 because password is incorrect", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "54321",
+    name: "john",
+    password: "1a2b3c",
     to: "0654321234",
     message: "Hello world",
   });
@@ -106,8 +106,8 @@ it("should get a 401 because password is incorrect", async () => {
 
 it("should get a 202 even though gammu command failed", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
+    name: "john",
+    password: "a1b2c3",
     to: "0654321234",
     message: " Hello world ",
   });
@@ -124,9 +124,9 @@ it("should get a 202 even though gammu command failed", async () => {
 
 it("should get a 202 even though nodemailer failed", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
-    to: "bobby@pigeon.io",
+    name: "john",
+    password: "a1b2c3",
+    to: "john@pigeon.io",
     subject: " Hello ",
     message: " <p>Hello world</p> ",
   });
@@ -139,14 +139,14 @@ it("should get a 202 even though nodemailer failed", async () => {
     html: "<p>Hello world</p>",
     subject: "Hello",
     text: "Hello world",
-    to: "bobby@pigeon.io",
+    to: "john@pigeon.io",
   });
 });
 
 it("should get a 202 and send a sms", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
+    name: "john",
+    password: "a1b2c3",
     to: "0654321234",
     message: "Bonjour monde",
   });
@@ -163,9 +163,9 @@ it("should get a 202 and send a sms", async () => {
 
 it("should get a 202 and send an email", async () => {
   const response = await request.get("/").query({
-    name: "bobby",
-    password: "12345",
-    to: "bobby@pigeon.io",
+    name: "john",
+    password: "a1b2c3",
+    to: "john@pigeon.io",
     subject: " Bonjour ",
     message: " <p>Bonjour monde</p> ",
   });
@@ -178,6 +178,6 @@ it("should get a 202 and send an email", async () => {
     html: "<p>Bonjour monde</p>",
     subject: "Bonjour",
     text: "Bonjour monde",
-    to: "bobby@pigeon.io",
+    to: "john@pigeon.io",
   });
 });
