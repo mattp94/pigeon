@@ -72,3 +72,12 @@ it("should send an email", async () => {
     "http://pigeon:8080?name=john&password=a1b2c3&to=john%40pigeon.io&message=%3Cp%3EBonjour+monde%3C%2Fp%3E&subject=Bonjour"
   );
 });
+
+it("should make a call with an incomplete url", async () => {
+  const client = new Client({});
+  const promise = client.send({});
+
+  await expect(promise).rejects.toThrowError("Crash");
+
+  expect(fetch).toHaveBeenLastCalledWith("http://localhost:3000?");
+});
