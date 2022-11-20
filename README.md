@@ -1,5 +1,6 @@
 # Pigeon
 
+[![CI](https://github.com/mattp94/pigeon/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/mattp94/pigeon/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/mattp94/pigeon/badge.svg?branch=master)](https://coveralls.io/github/mattp94/pigeon?branch=master)
 
 > Little bird 🐦, send my message ✉️
