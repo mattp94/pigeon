@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches:
+      - ci-ga
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18.12.1
+      - name: Install dependencies
+        run: npm install
+      - name: Run test
+        run: npm test
+      - name: Publish coverage
+        uses: coverallsapp/github-action@v1.1.3
+        with:
+          github-token: ${{ github.token }}
