@@ -1,6 +1,5 @@
 # Pigeon
 
-[![Build Status](https://travis-ci.org/mattp94/pigeon.svg?branch=master)](https://travis-ci.org/mattp94/pigeon)
 [![Coverage Status](https://coveralls.io/repos/github/mattp94/pigeon/badge.svg?branch=master)](https://coveralls.io/github/mattp94/pigeon?branch=master)
 
 > Little bird 🐦, send my message ✉️
