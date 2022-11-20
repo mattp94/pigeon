@@ -73,11 +73,11 @@ it("should send an email", async () => {
   );
 });
 
-it("should make a call with an incomplete url", async () => {
+it("should throw a missing params error", async () => {
   const client = new Client({});
   const promise = client.send({});
 
-  await expect(promise).rejects.toThrowError("Crash");
-
-  expect(fetch).toHaveBeenLastCalledWith("http://localhost:3000?");
+  await expect(promise).rejects.toThrowError(
+    "Missing params (name, password, to, message or host)"
+  );
 });
