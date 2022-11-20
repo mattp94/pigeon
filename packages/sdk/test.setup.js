@@ -8,8 +8,7 @@ jest.mock("cross-fetch", () => {
       statusText: "Unauthorized",
     })
     .mockResolvedValueOnce({ ok: true })
-    .mockResolvedValueOnce({ ok: true })
-    .mockRejectedValueOnce(new Error("Crash"));
+    .mockResolvedValueOnce({ ok: true });
 
   return mock;
 });

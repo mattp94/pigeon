@@ -7,23 +7,12 @@ module.exports = class {
 
   async send({ to, subject, message }) {
     const { name, password, host } = this;
-    const payload = {};
 
-    if (name) {
-      payload.name = name;
+    if (!name || !password || !to || !message || !host) {
+      throw new Error("Missing params (name, password, to, message or host)");
     }
 
-    if (password) {
-      payload.password = password;
-    }
-
-    if (to) {
-      payload.to = to;
-    }
-
-    if (message) {
-      payload.message = message;
-    }
+    const payload = { name, password, to, message };
 
     if (subject) {
       payload.subject = subject;
