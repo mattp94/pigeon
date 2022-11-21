@@ -8,7 +8,7 @@
     "prepare": "husky install",
     "format": "pretty-quick",
     "test": "GMAIL_EMAIL=fake.messenger@gmail.com GMAIL_NAME=FakeMessenger GMAIL_PASSWORD=secret jest",
-    "release:version": "lerna version --no-push",
+    "release:version": "lerna version",
     "release:publish": "lerna publish from-package"
   },
   "devDependencies": {
