@@ -9,6 +9,11 @@
     "directory": "packages/cli"
   },
   "license": "MIT",
+  "files": [
+    "./index.js",
+    "./lib",
+    "./scripts"
+  ],
   "bin": {
     "pigeon": "./index.js"
   },
